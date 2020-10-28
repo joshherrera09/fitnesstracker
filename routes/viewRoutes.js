@@ -18,3 +18,5 @@ app.get('/stats', function (request, response) {
     // respond with: response.send()
 
 });
+
+module.exports = route;
