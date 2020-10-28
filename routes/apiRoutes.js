@@ -13,7 +13,7 @@ route.post('/api/workouts', function (request, response) {
         });
 });
 
-app.put('/api/workouts/:id', function ({ body, params}, response) {
+route.put('/api/workouts/:id', function ({ body, params}, response) {
     // get all body stuff from request.body object
     // get all request parameter stuff from request.params object
     Workout.findByIdAndUpdate(
@@ -36,7 +36,7 @@ route.get('/api/workouts', function(request, response) {
         });
 });
 
-app.get('/api/workouts/range', function (request, response) {
+route.get('/api/workouts/range', function (request, response) {
     // get all body stuff from request.body object
     // get all request parameter stuff from request.params object
     Workout.find({}).limit(7)
@@ -47,3 +47,4 @@ app.get('/api/workouts/range', function (request, response) {
             response.json(err)
         });
 });
+
