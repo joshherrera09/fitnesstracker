@@ -48,7 +48,7 @@ route.get('/api/workouts/range', function (request, response) {
         });
 });
 
-app.delete('/api/workouts', function ({ body }, response) {
+route.delete('/api/workouts', function ({ body }, response) {
     // get all body stuff from request.body object
     // get all request parameter stuff from request.params object
     Workout.findByIdAndDelete(body.id)
